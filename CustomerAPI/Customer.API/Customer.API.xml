@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Customer.API</name>
+    </assembly>
+    <members>
+        <member name="M:CustomerAPI.Controllers.CustomersController.GetCustomerByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a specific customer by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="200">Customer retrieved</response>
+            <response code="404">Customer not found</response>
+        </member>
+        <member name="M:CustomerAPI.Controllers.CustomersController.GetCustomersAsync(System.String)">
+            <summary>
+            Retrieves a list of customers matching the search criteria 
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            <remarks>
+            'name' is optional. If provided, searches for partial match on the customer's first or last name
+            </remarks>
+            <response code="200">Search completed successfully</response>
+        </member>
+        <member name="M:CustomerAPI.Controllers.CustomersController.CreateCustomerAsync(CustomerAPI.Dto.CustomerCommandDTO)">
+            <summary>
+            Creates a new customer
+            </summary>
+            <param name="customerDto">customer details</param>
+            <returns></returns>
+            <response code="400">request has invalid parameters</response>
+            <response code="201">Customer created successfully</response>
+        </member>
+        <member name="M:CustomerAPI.Controllers.CustomersController.UpdateCustomerAsync(System.Int32,CustomerAPI.Dto.CustomerCommandDTO)">
+            <summary>
+            Updates the details of an existing customer
+            </summary>
+            <param name="id">unique customer id</param>
+            <param name="customerDto">customer details</param>
+            <returns></returns>
+            <response code="400">request has invalid parameters</response>
+            <response code="404">customer not found</response>
+            <response code="201">customer updated successfully</response>
+        </member>
+        <member name="M:CustomerAPI.Controllers.CustomersController.DeleteCustomerByIdAsync(System.Int32)">
+            <summary>
+            Delete specific customer by id
+            </summary>
+            <param name="id">unique customer id</param>
+            <returns></returns>
+            <response code="400">request has invalid parameters</response>
+            <response code="404">customer not found</response>
+            <response code="204">customer deleted successfully</response>
+        </member>
+        <member name="P:CustomerAPI.Dto.CustomerCommandDTO.FirstName">
+            <summary>
+            The customer's first name
+            </summary>
+            <example>Philip</example>
+        </member>
+        <member name="P:CustomerAPI.Dto.CustomerCommandDTO.LastName">
+            <summary>
+            The customer's last name
+            </summary>
+            <example>Huynh</example>
+        </member>
+        <member name="P:CustomerAPI.Dto.CustomerDTO.Id">
+            <summary>
+            The customer's unique id
+            </summary>
+        </member>
+        <member name="P:CustomerAPI.Dto.CustomerDTO.FirstName">
+            <summary>
+            The customer's first name
+            </summary>
+            <example>Philip</example>
+        </member>
+        <member name="P:CustomerAPI.Dto.CustomerDTO.LastName">
+            <summary>
+            The customer's last name
+            </summary>
+            <example>Huynh</example>
+        </member>
+    </members>
+</doc>
